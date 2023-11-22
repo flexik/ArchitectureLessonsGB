@@ -10,6 +10,19 @@ public class Scene {
     public List<Flash> flashes;
     public List<Camera> cameras;
 
+    public Scene(int id, List<PoligonalModel> models, List<Flash> flashes, List<PoligonalModel> models, List<Camera> cameras){
+        this.id = id;
+        this.flashes = flashes;
+        if (models.size() > 0) {
+            this.models = models;
+        }
+        else throw new RuntimeException("Список пустой, должна быть хотя бы 1 модель");
+        if (cameras.size() > 0) {
+            this.cameras = cameras;
+        }
+        else throw new RuntimeException("Список пустой, должна быть хотя бы 1 камера");
+    }
+
     public Type method1(Type type){
         return null;
     }

@@ -6,7 +6,6 @@ import java.util.List;
 import ModelElements.*;
 
 
-
 public class ModelStore implements IModelChanger{
     public List<PoligonalModel> models;
     public List<Scene> scenes;
@@ -21,6 +20,17 @@ public class ModelStore implements IModelChanger{
         this.scenes = new ArrayList<>();
         this.flashes = new ArrayList<>();
         this.cameras = new ArrayList<>();
+
+        List<Texture> textures = new ArrayList<>();
+
+        models.add(new PoligonalModel(textures));
+        this.scenes.add(new Scene());
+        this.flashes.add(new Flash());
+        this.cameras.add(new Camera());
+    }
+
+    public Scene getScene(int id){
+        return this.scenes.get(id);
     }
 
     @Override
@@ -29,5 +39,4 @@ public class ModelStore implements IModelChanger{
         throw new UnsupportedOperationException("Unimplemented method 'notifyChange'");
     }
 
-    
 }
