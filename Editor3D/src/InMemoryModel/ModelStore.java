@@ -24,7 +24,7 @@ public class ModelStore implements IModelChanger{
         List<Texture> textures = new ArrayList<>();
 
         models.add(new PoligonalModel(textures));
-        this.scenes.add(new Scene());
+        this.scenes.add(new Scene(0, models, flashes, cameras));
         this.flashes.add(new Flash());
         this.cameras.add(new Camera());
     }

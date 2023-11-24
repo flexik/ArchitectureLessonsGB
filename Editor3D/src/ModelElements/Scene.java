@@ -10,7 +10,7 @@ public class Scene {
     public List<Flash> flashes;
     public List<Camera> cameras;
 
-    public Scene(int id, List<PoligonalModel> models, List<Flash> flashes, List<PoligonalModel> models, List<Camera> cameras){
+    public Scene(int id, List<PoligonalModel> models, List<Flash> flashes, List<Camera> cameras){
         this.id = id;
         this.flashes = flashes;
         if (models.size() > 0) {
